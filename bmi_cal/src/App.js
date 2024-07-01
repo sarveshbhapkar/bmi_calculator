@@ -1,7 +1,16 @@
 import "./App.css";
+import { useState } from "react";
 
 
 function App() {
+
+  const[weight,setweight] = useState(0);
+  const[height,setheight] = useState(0);
+  const[bmi,setbmi] = useState('');
+  const[message,setmessage] = useState('');
+
+
+
   return (
     <div className="App">
       <div className="container">
@@ -13,15 +22,18 @@ function App() {
               type="text"
               placeholder="Enter Weight Value"
               value={weight}
+              onChange={(e)=> setweight(e.target.value)}
             />
           </div>
 
           <div>
-            <label>height{inches}</label>
+            <label>Height {in}</label>
             <input
               type="text"
               placeholder="Enter Height Value"
               value={height}
+              onChange={(e)=> setheight(e.target.value)}
+
             />
           </div>
 
